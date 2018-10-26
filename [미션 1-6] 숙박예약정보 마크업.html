@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="UTF-8">
+        <title>HTML 컨테이너 요소들</title>
+        <style>
+            /* CSS */
+            .icon-staylist-score {
+                margin-top: -1px;
+            }
+            .icon-staylist-score.score05 {
+                background-position: -18px 0;
+            }
+            .icon-staylist-score.score10 {
+                background-position: 0 0;
+            }
+            .icon-staylist-score {
+                width: 16px;
+                height: 16px;
+            }
+            .icon-staylist {
+                display: inline-block;
+                overflow: hidden;
+                font-size: 0;
+                line-height: 0;
+                text-indent: -9999px;
+                vertical-align: middle;
+                background: url("https://yaimg.yanolja.com/joy/pw/search/icon-staylist.svg") no-repeat;
+            }
+            .reserve-price {
+                color: white;
+                background-color: red;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <!-- markup -->
+
+        <!--left image-->
+        <figure>
+            <img
+                src="https://yaimg.yanolja.com/resize/place/v4/2017/08/19/07/640/59976c4f7cf998.25532436.jpg"
+                alt="H Avenue 역삼점 이미지">
+        </figure>
+
+        <!--right detail-->
+        <div class="detail">
+            <h2>H Avenue 역삼점</h2>
+            <span id="stars">
+                <i class="icon-staylist icon-staylist-score score10"></i>
+                <i class="icon-staylist icon-staylist-score score10"></i>
+                <i class="icon-staylist icon-staylist-score score10"></i>
+                <i class="icon-staylist icon-staylist-score score10"></i>
+                <i class="icon-staylist icon-staylist-score score05"></i>
+            </span>
+            <span id="reviews">후기: <data>1726</data>개</span>
+            <span class="distance"><data>1.4</data>km</span>
+
+            <div class="price">
+                <p>대실 <small>최대 <time>5시간</time></small>
+                    <span class="reserve-price">예약가</span>
+                    <small><s>35,000</s></small> <data>27,000</data>원
+                </p>
+                <p>숙박 <small><time>20:00</time></small>
+                    <span class="reserve-price">예약가</span>
+                    <small><s>90,000</s></small> <data>27,000</data>원
+                </p>
+            </div>
+
+            <div class="hastags">
+                <em>#쿠폰혜택 #TOP100 #마이룸 #좋은숙박연구소 #현장적립 #최저가보상</em>
+            </div>
+
+            <div class="conditions">
+                <ul>
+                    <li>* 비즈니스 고객님!, 두 분이서 오세요! *</li>
+                    <li>* 아메리카노 무료 제공 *</li>
+                </ul>
+            </div>
+        </div>
+
+    </body>
+    </html>
