@@ -25,11 +25,12 @@
   -->
 
   <!-- address -->
-  서울특별시 강남구 삼성로 648 SM ENTERTAINMENT
-  Communication Center 대표전화 02 6240 9800
-  <!-- 사업자 등록조회 확인: https://goo.gl/XqFuCC -->
-  대표 : 한세민, 남소영 사업자번호 114 81 63109
-  Copyright©2013 SM ENTERTAINMENT Co., Ltd. ©All rights reserved.
+  <address>
+    서울특별시 강남구 삼성로 648 SM ENTERTAINMENT
+    Communication Center 대표전화 <a href="tel:+82262409800">02 6240 9800</a>
+    대표 : 한세민, 남소영 사업자번호 <a href="https://goo.gl/XqFuCC" target="_blank">114 81 63109</a>
+    <small>Copyright&copy;2013 SM ENTERTAINMENT Co., Ltd. ©All rights reserved.</small>
+  </address>
 
 
   <!-- preserved text
@@ -44,21 +45,27 @@
   -->
 
   <!-- 아스키(ASCII) 코드 -->
-  ____  ∧ ∧
-     |＼ /(´～`)＼<변화구
-     |　|￣￣￣￣￣|
-     |　|＝みかん＝|
-   ＼|＿＿＿＿＿|
+  <pre>
+        ____  ∧ ∧
+       |＼ /(´～`)＼&lt;변화구
+       |　|￣￣￣￣￣|
+       |　|＝みかん＝|
+        ＼|＿＿＿＿＿|
+  </pre>
 
 
   <!-- JavaScript 컴퓨터 프로그래밍 코드 -->
   <p>다음은 패널(Panel) 생성자 함수(Constructor Function) 입니다.</p>
 
-  function Panel(element, canClose, closeHandler) {
-    this.element = element;
-    this.canClose = canClose;
-    this.closeHandler = function () { if (closeHandler) closeHandler() };
-  }
+<pre>
+    <code>
+      function Panel(element, canClose, closeHandler) {
+        this.element = element;
+        this.canClose = canClose;
+        this.closeHandler = function () { if (closeHandler) closeHandler() };
+      }
+    </code>
+</pre>
 
 </body>
 </html>
