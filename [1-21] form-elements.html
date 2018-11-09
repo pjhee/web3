@@ -6,6 +6,112 @@
 </head>
 <body>
 
+  <form action="/" method="POST" enctype="multipart/form-data">
+    <!-- <label>이름<input type="text" placeholder="이름을 입력하세요" maxlength="4"></label> -->
+    <p>
+      <label>이름</label>
+      <input
+          id="user_name"
+          name="user_name"
+          type="text"
+          placeholder="이름을 입력하세요."
+          maxlength="4"
+          minlength="2"            
+          value="박준희">
+    </p>
+    <p>
+      <label for="user_pass">비밀번호</label>
+      <input
+        type="password"
+        name="user_pass"
+        id="user_pass"
+        required
+        placeholder="비밀번호 6자리 입력해주세요.">
+    </p>
+    <button type="submit">전송</button>
+
+    
+    <p>
+      <label><input type="radio" name="user_gender" value="1" checked>여성</label>
+      <label><input type="radio" name="user_gender" value="2">남성</label>
+    </p>
+
+    <p>
+      <label>
+        <input type="checkbox" name="user_agree" id="user_agree">모든 내용을 읽고 동의합니까
+      </label>
+    </p>
+
+    <p>
+      <input type="file" name="user_data_upload" id="user_data_upload">
+    </p>
+
+    <p>
+      <label>검색 <input type="search" name="user_search" id="user_search"></label>
+    </p>
+    <p>
+      <label>이동할 웹주소 <input list="url_ex" type="url" name="user_url" id="user_url"></label>
+      <datalist id="url_ex">
+        <option value="http://naver.com">naver</option>
+        <option value="http://nate.com">nate</option>
+        <option value="http://google.com">google</option>
+        <option value="http://goo.gl">google short url</option>
+      </datalist>
+    </p>
+    <p>
+      <label>전화번호 <input list="tel_ex" type="tel" name="user_tel" id="user_tel"></label>
+      <datalist id="tel_ex">
+        <option value="111">111</option>
+        <option value="112">112</option>
+        <option value="114">114</option>
+        <option value="119">119</option>
+      </datalist>
+    </p>
+    <p>
+        <label for="date">Date
+          <input type="date" name="user_date" id="user_date">
+        </label>
+      </p>
+  
+      <p>
+        <label for="month">Month
+          <input type="month" name="user_month" id="user_month">
+        </label>
+      </p>
+  
+      <p>
+        <label for="week">Week
+         <input type="week" name="user_week" id="user_week">
+        </label>
+      </p>
+  
+      <p>
+        <label for="time">Time
+          <input type="time" name="user_time" id="user_time">
+        </label>
+      </p>
+  
+      <p>
+        <label for="dt-local">Datetime Local
+          <input type="datetime-local" name="datetime-local" id="datetime-local">
+        </label>
+      </p>
+    <p>
+      <label>이메일 <input type="email" name="user_email" id="user_email" placeholder="user@example.com"></label>
+    </p>
+  
+    <input type="submit" value="전송">
+    <input type="button" value="버튼">
+    <input type="image" src="https://goo.gl/Ng66oQ" alt="체크인" width="20" height="20">
+    <input type="reset" value="초기화">
+    <input type="hidden" name="using-ajax" value="true">
+    <input type="number" name="" id="" min="100" step="10" max="1000" value="150">
+    <input type="range" name="" id="" min="10" step="5" max="25" value="15">
+    <input type="color" name="" id="" value="#F7CC60">
+
+    
+  </form>
+
 <!--
 
   <form>
