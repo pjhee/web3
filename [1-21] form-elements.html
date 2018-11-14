@@ -8,26 +8,29 @@
 
   <form action="/" method="POST" enctype="multipart/form-data">
     <!-- <label>이름<input type="text" placeholder="이름을 입력하세요" maxlength="4"></label> -->
-    <p>
-      <label>이름</label>
-      <input
-          id="user_name"
-          name="user_name"
-          type="text"
-          placeholder="이름을 입력하세요."
-          maxlength="4"
-          minlength="2"            
-          value="박준희">
-    </p>
-    <p>
-      <label for="user_pass">비밀번호</label>
-      <input
-        type="password"
-        name="user_pass"
-        id="user_pass"
-        required
-        placeholder="비밀번호 6자리 입력해주세요.">
-    </p>
+    <fieldset>
+      <legend>사용자</legend>
+      <p>
+        <label>이름</label>
+        <input
+            id="user_name"
+            name="user_name"
+            type="text"
+            placeholder="이름을 입력하세요."
+            maxlength="4"
+            minlength="2"            
+            value="박준희">
+      </p>
+      <p>
+        <label for="user_pass">비밀번호</label>
+        <input
+          type="password"
+          name="user_pass"
+          id="user_pass"
+          required
+          placeholder="비밀번호 6자리 입력해주세요.">
+      </p>
+    </fieldset>
     <button type="submit">전송</button>
 
     
@@ -66,6 +69,22 @@
         <option value="114">114</option>
         <option value="119">119</option>
       </datalist>
+    </p>
+    <p>
+      <label for="user_hobby">취미</label>
+      <select name="user_hobby" id="user_hobby" multiple size="3" required>
+        <option value="0">없음</option>
+        <option value="1">축구</option>
+        <option value="2">농구</option>
+        <option value="3">독서</option>
+        <option value="4">영화관람</option>
+      </select>
+    </p>
+    <p>
+      <label for="user_comments">코멘트</label>
+      <textarea name="user_comments" id="user_comments" cols="30" rows="10">
+      남기고 싶은 말을 작성해주세요.
+      </textarea>
     </p>
     <p>
         <label for="date">Date
