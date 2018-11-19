@@ -1,0 +1,67 @@
+body {
+  margin: 50px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+abbr {
+  cursor: help;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  color: #474cc5;
+}
+
+a {
+  color: #474cc5;
+}
+
+figure {
+  margin: 20px 10px;
+  border: 1px solid #999;
+  padding: 20px;
+}
+
+figcaption {
+  margin-top: 20px;
+  border-top: 1px solid #a1a1a7;
+  padding-top: 20px;
+  text-align: center;
+  color: #545496;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+/*그룹핑*/
+a, abbr {
+  color: #2fb56e;
+}
+
+/*모든 요소에 적용*/
+* {
+  /* border: 1px solid #ffffff; */
+}
+
+h1 abbr {
+  background-color: #afce67;
+}
+
+.note {
+  font-size: 20px;
+}
+
+.note.box {
+  border: 1px solid #f00;
+}
+
+#about-css {
+  padding: 30px;
+}
