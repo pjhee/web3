@@ -13,6 +13,7 @@
 
   [전체 선택자 (Universal Selector)]
     * { ... }
+    #about-css * { ... } -> about-css 밑의 모든 값
 
 
   [자손 선택자 (Descendent Selector)]
