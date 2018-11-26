@@ -18,18 +18,21 @@
 
   [자손 선택자 (Descendent Selector)]
     h1 abbr { ... }
+    .note abbr { ... }
 
 
   [자식 선택자 (Child Selector)]
     .parent > .child { ... }
 
 
-  [클래스 선택자 (Class Selector)]
+  [클래스 선택자 (Class Selector)] -> 대소문자 구분
     .class { ... }
 
 
   [멀티 클래스 선택자 (Mutil Class Selector)]
     .class1.class2 { ... }
+
+    .class1 . class2 { ... } -> 이 경우는 멀티 클래스 선택자가 아닌 자손 클래스 선택자 이다!!
 
 
   [아이디 선택자 (ID Selector)]
@@ -95,6 +98,40 @@
     p::first-letter {
       font-weight: bold;
       font-size: 20px;
+    }
+
+    h1 {
+      font-weight: normal;
+    }
+    
+    /* 그룹핑, ','로 구분해준다. */
+    a, abbr {
+      color: #2fb56e;
+    }
+    
+    /* 유니버셜 셀렉터, 모든 요소에 적용 */
+    /* * {
+      border: 1px solid #000000;
+    } */
+    
+    /* 자손 선택자 또는 하위 선택자 */
+    h1 abbr {
+      background-color: #ff0;
+    }
+
+    /* 클래스 선택자 */    
+    .note {
+      font-size: 20px;
+    }
+    
+    /* 멀티 클래스 */
+    .note.box {
+      border: 1px solid #f0f;
+    }
+    
+    /* ID선택자 */
+    #about-css {
+      padding: 30px;
     }
 
 
