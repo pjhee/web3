@@ -4,3 +4,14 @@
       속성(property): 값(value);
     }
 */
+
+section {
+  color: #903000;
+}
+h1 {
+  color: tan;
+}
+abbr {
+  cursor: help; 
+  text-decoration: none;
+}
