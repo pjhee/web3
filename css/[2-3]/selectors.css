@@ -35,6 +35,17 @@
   [아이디 선택자 (ID Selector)]
     #id { ... }
 
+    body 요소 내부의 모든 자손 선택
+      body * {
+        outline: 3px solid #fc414b
+      }
+
+    body 요소 내부의 모든 자식(Child) 선택 
+      body > * {
+        outline: 3px solid #fc414b
+      }
+
+    /* css는 대소문자를 구분한다.
 
   [속성 선택자 (Attribute Selector)]
 
@@ -49,6 +60,7 @@
     [class="note"]    { ... }
     .note             { ... }
 
+    ^는 시작하는 단어를 의미 
     [href^="http://"] { ... }
     [src$=".svg"]     { ... }
     [src*="phone"]    { ... }
@@ -74,13 +86,17 @@
 
 
   [가상 요소 (Pseudo Element)]
-
+  
     ::first-letter { ... }
     ::first-line   { ... }
     ::before       { ... }
     ::after        { ... }
+    */
+    p::first-letter {
+      font-weight: bold;
+      font-size: 20px;
+    }
 
-*/
 
 
 

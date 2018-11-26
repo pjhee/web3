@@ -1,0 +1,75 @@
+::selection {
+  background: #9dd7da;
+  color: #4a5f5f;
+}
+
+body {
+  margin: 30px;
+  background: #fff;
+  color: #000;
+}
+
+.album {
+  float: right;
+  margin: 0 0 0 20px;
+  padding: 0;
+  width: 240px;
+}
+
+.album img {
+  vertical-align: middle;
+}
+
+.album audio {
+  width: 100%;
+}
+
+#css-typography {
+  float: left;
+  width: 520px;
+}
+
+.lone-url {
+  border-radius: 6px;
+  padding: 1em;
+  background: #efefef;
+}
+
+body {
+  font-family: IropkeBatangM;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #483372;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: normal;
+  /* text-transform: uppercase;
+  font-variant: all-small-caps;
+  text-decoration: overline underline line-through; */
+  text-shadow: 0px 0px 10px #9bdbde;
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 14px;
+  letter-spacing: -0.024em;
+  word-spacing: 0.02em;
+  text-indent: -0.2em;
+  /* padding-left: 1em; */
+}
+
+.white-space-ex {
+  white-space: pre-line;
+}
+
+.white-break-ex {
+  word-break: break-all;
+}
+
+
