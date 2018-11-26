@@ -16,12 +16,12 @@
     #about-css * { ... } -> about-css 밑의 모든 값
 
 
-  [자손 선택자 (Descendent Selector)]
+  [자손 선택자 (Descendent Selector)] -> 아래 자손 모두 해당
     h1 abbr { ... }
     .note abbr { ... }
 
 
-  [자식 선택자 (Child Selector)]
+  [자식 선택자 (Child Selector)] -> 부모의 직계 자식만 해당
     .parent > .child { ... }
 
 
@@ -52,21 +52,21 @@
 
   [속성 선택자 (Attribute Selector)]
 
-    [id]              { ... }
+    [id]              { ... } -> id 속성을 가지고 있다면 이라는 의미이다.
     [class]           { ... }
     [title]           { ... }
-    [shape][title]    { ... }
+    [shape][title]    { ... } -> shape과 title 속성을 둘다 가지고 있다면 이라는 의미이다.
 
     [id="about-css"]  { ... }
-    #about-css        { ... }
+    #about-css        { ... } -> 위의 표기법과 같은 의미이다.
 
     [class="note"]    { ... }
     .note             { ... }
 
     ^는 시작하는 단어를 의미 
-    [href^="http://"] { ... }
-    [src$=".svg"]     { ... }
-    [src*="phone"]    { ... }
+    [href^="http://"] { ... } -> 속성값이 "http://"로 시작한다면
+    [src$=".svg"]     { ... } -> 속성값이 ".svg"로 끝난다면
+    [src*="phone"]    { ... } -> 속성값에 "phone"이 들어간 모든 값
 
 
   [가상 클래스 (Pseudo Class)]
@@ -95,19 +95,19 @@
     ::before       { ... }
     ::after        { ... }
     */
-    p::first-letter {
-      font-weight: bold;
-      font-size: 20px;
-    }
 
-    h1 {
+
+/*======================================================================================================*/
+
+
+    /* h1 {
       font-weight: normal;
-    }
+    } */
     
     /* 그룹핑, ','로 구분해준다. */
-    a, abbr {
+    /* a, abbr {
       color: #2fb56e;
-    }
+    } */
     
     /* 유니버셜 셀렉터, 모든 요소에 적용 */
     /* * {
@@ -115,29 +115,187 @@
     } */
     
     /* 자손 선택자 또는 하위 선택자 */
-    h1 abbr {
+    /* h1 abbr {
       background-color: #ff0;
-    }
+    } */
 
     /* 클래스 선택자 */    
-    .note {
+    /* .note {
       font-size: 20px;
-    }
+    } */
     
     /* 멀티 클래스 */
-    .note.box {
+    /* .note.box {
       border: 1px solid #f0f;
-    }
+    } */
     
     /* ID선택자 */
-    #about-css {
+    /* #about-css {
       padding: 30px;
-    }
+    } */
+
+    /* body 요소 내부의 모든 자손 선택 */
+    /* body * {
+        outline: 3px solid #fc414b;
+    } */
+
+    /* body 요소 내부의 모든 자식(Child) 선택 */
+    /* body > * {
+      outline: 3px solid #fc414b;
+  } */
+
+  /* 속성 선택자 */
+  /* [id] {
+    outline: 3px solid #fc414b;
+  } */
+
+  /* [class] {
+    outline: 3px solid #fc414b;
+  } */
+
+  /* [title] {
+    outline: 3px solid #fc414b;
+  } */
+
+  /* [title][lang] {
+    outline: 3px solid #000;
+  }  */
+
+  /* [id="about-css"] {
+    outline: 3px solid #fc414b;
+  } */
+
+  /* #about-css {
+    outline: 3px solid #fc414b;
+  } */
+
+  /* 반드시 note인 요소만 적용된다. */
+  /* [class="note"] {
+    outline: 3px solid #fc414b;
+  } */
+
+  /* .note {
+    outline: 3px solid #fc414b;
+  } */
+
+  /* 요소값이 해당값으로 시작되는 경우 */
+  /* [title^="Scalable"] {
+    outline: 3px solid #fc414b;
+  } */
+
+  /* 요소 값이 해당값으로 끝나는 경우 */
+  /* [title$="Language"] {
+    outline: 3px solid #fc414b;
+  } */
+
+  /* 요소 값에 해당값이 일치하는 경우, 대소문자를 구분한다. */
+  [title*="Markup"] {
+    outline: 3px solid #fc414b;
+  }
 
 
+  a:link {
+    color: #ff487c;
+  }
+
+  a:visited {
+    color: #32c29a;
+  }
+
+  /* h1, h2, p {
+    color: #777;
+  } */
+
+  /* h1:hover,
+  h2:hover,
+  p:hover {
+    color: #222;
+  } */
+
+  p:active {
+    background: #ff0;
+  }
 
 
-/* 피규어 부분 코드
+  /*
+  outline은 해당 요소의 외곽선, px값을 올리면 외곽선의 두께가 두꺼워진다.
+  outline-offset은 테두리의 가장자리와 외곽선 사이의 여백을 의미하며, px값을 올리면 범위가 넓어진다.
+  */
+
+
+  /* 탭키를 눌렀을 때 아웃라인이 보이지 않는다. */
+  /* a:focus {
+    outline: none;
+  } */
+
+  a:focus {
+    outline-offset: 3px;
+    outline: 3px solid #333;
+  }
+
+  a:focus:hover {
+    outline: none;
+    background-color: #fe8440;
+  }
+
+/* 
+  ///.link-list li:first-child{ 
+  .link-list li:nth-child(1) {
+      outline: 3px solid #ff0;
+  }
+
+  .link-list li:last-child{
+    outline: 3px solid #6bb861;
+  } 
+
+  .link-list li:nth-child(3n) {
+    outline: 3px solid #fe8440;
+  } 
+  
+  */
+
+
+  /* 홀수 */
+  .link-list li:nth-child(odd) {
+    outline: 3px solid #e08cc7;
+  }
+
+  /* 짝수 */
+  .link-list li:nth-child(even) {
+    outline: 3px solid #8b86da;
+  } 
+  
+  :lang(en) {
+    font-family: "Times New Roman"
+  }
+
+  :lang(ko-KR) {
+    font-family: "Spoqa Han Sans";
+  }
+
+
+  /* p::first-letter {
+    font-weight: bold;
+    font-size: 20px;
+  } */
+
+  /* p::first-line {
+    font-weight: bold;
+    font-size: 20px;
+  } */
+
+  abbr::before {
+    content: '[';
+    font-style: normal;
+  }
+
+  abbr::after {
+    content: ']';
+    font-style: normal;
+  }
+
+
+/* 피규어 부분 코드 */
   figure::before {
     content: 'Figure';
     display: block;
@@ -147,4 +305,3 @@
     background: #222;
     color: #fff;
   }
-*/
