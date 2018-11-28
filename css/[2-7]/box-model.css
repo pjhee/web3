@@ -40,7 +40,7 @@
         - video
 
     [BOX]
-      * margin-box   --  외부 공간 박스
+      * margin-box   --  외부 공간 박스 -> 투명한 공간, 음수값을 사용할 수 있다.
       * border-box   --  테두리 공간 박스
       * padding-box  --  내부 공간 박스
       * content-box  --  콘텐츠 공간 박스
@@ -104,3 +104,49 @@
 
 */
 
+.inline-block-box {
+  display: inline-block;
+  width: 700px;
+  height: 80xpx;
+}
+
+.demo {
+  width: 100px;
+  height: 100px;
+  background: rgb(198, 214, 141);
+  text-align: center;
+  line-height: 100px;
+  margin: 20px 10px 10px 15px;
+  padding: 20px 10px;
+  font-size: 2em;
+  font-style: bold;
+  border: 1px solid #000;
+}
+
+.dimension-ex {
+  min-width: 200px;
+  min-height: 80px;
+  max-width: 500px;
+  max-height: 200px;
+}
+
+/* padding값은 위부터 주므로 범위가 부족할 경우 글자가 밑으로 밀려난다. */
+.box-sizing-on {
+  box-sizing: border-box;
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid rgb(231, 183, 120);
+  text-align: center;
+  line-height: 100px;
+}
+
+.box-sizing-off {
+  /* box-sizing: border-box; */
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid rgb(231, 183, 120);
+  text-align: center;
+  line-height: 100px;
+}

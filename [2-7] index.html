@@ -8,8 +8,8 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/spoqa-han-sans/2.1.1/css/SpoqaHanSans-kr.min.css"
     media="none"
     onload="if(media!=='all'){media='all'}">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/box-model.css">
+  <link rel="stylesheet" href="css/[2-7]/style.css">
+  <link rel="stylesheet" href="css/[2-7]/box-model.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -48,6 +48,12 @@
           인라인 블록 박스는 기본적으로는 인라인처럼 화면에 렌더링되지만, 블록 박스처럼 <strong class="inline-block-box is-hover">너비(<code class="inline-box">width</code>) / 높이(<code class="inline-box">height</code>) 설정이 가능</strong>합니다. (<code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;button&gt;</code> 등)
         </p>
       </section>
+    </article>
+
+    <article>
+      <div class="demo">
+        demo
+      </div>
     </article>
 
     <article class="part">
@@ -89,6 +95,14 @@
         class="dimension-ex"
         cols="15"
         rows="4"></textarea>
+
+        <p class="box-sizing-on">
+          box-sizing-on
+        </p>
+
+        <p class="box-sizing-off">
+          box-sizing-off
+        </p>
     </article>
 
     <article class="part">
@@ -120,6 +134,7 @@
         </div>
       </div>
 
+      <!-- 콘텐츠의 사이즈가 작아도 무조건 스크롤이 보인다.  -->
       <div class="parent-box is-ov-scroll">
         <div class="child-box">
           <code>overflow: scroll</code>
