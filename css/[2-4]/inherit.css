@@ -16,3 +16,12 @@
     - padding
 
 */
+
+article {
+  color: #fe4940;
+  font-size: 22px;
+  font-family: Arial;
+  letter-spacing: -0.5px;
+  outline: 3px solid #34c9c0;
+  padding: 20px;
+}
