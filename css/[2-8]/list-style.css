@@ -3,3 +3,32 @@
   CSS 리스트(Lists) 스타일링
   ------------------------------------------------
 */
+
+/*
+HTML <ul>, <ol>, <li>, <dl>, <dt>, <dd>
+*/
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem; /*rem = root em  상대적인 값*/
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+li {
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+li::before {
+  content: '-o-';
+  color: #474cc5;
+  margin-left: 1em;
+}
