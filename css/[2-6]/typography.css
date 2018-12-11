@@ -11,14 +11,14 @@
       font-size
       font-weight
       font-style
-      font-variant
+      font-variant : 
 
       ※ 글자 색상은 color 속성으로 설정.
-        color keywords: red, gree, blue, pink, black
+        color keywords: red, green, blue, pink, black
         hex color code: #RRGGBB / 0 ~ 9, a ~ f 예) #1868a7
-        rgb, rgba: RED, GREEN, BLUE, ALPHA 예) rgba(127,255,0,0.3)
-        ALPHA는 불투명정도 (0~1 1은 불투명 0은 투명)
-        hsl, hsla: HUE, SATURATION, LIGHTNESS, ALPHA 예) hsla(360,60%,70%,1)
+        rgb, rgba: RED, GREEN, BLUE, ALPHA 예) rgba(127,255,0,0.3) ->0~255까지값이있다.
+        ->ALPHA는 불투명정도 (0~1 1은 불투명 0은 투명)
+        hsl, hsla: HUE(색상값, 각도로 조절가능deg), SATURATION(채도, %로 조절가능), LIGHTNESS(명도, %로 조절가능), ALPHA 예) hsla(360,60%,70%,1)
       ※ 웹브라우저는 운영체제가 지원하는 기본 폰트(웹 안전 폰트)만
         화면에 렌더링 한다. (참고: cssfontstack.com)
         즉, 사용된 폰트가 사용자 컴퓨터에 없으면 렌더링 X.
@@ -64,3 +64,57 @@
       word-wrap
 
 */
+
+body {
+  font-family: IropkeBatangM;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #483372;
+  /* text-align: center; */
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 32px;
+  font-weight: normal;
+  /* text-transform: uppercase;
+  font-variant: all-small-caps;
+  text-decoration: overline underline line-through; */
+  /*text-shadow: x y blur sprea color;*/
+  /* text-shadow: -5px -5px 3px #9bdbde,
+                5px 5px 3px #943978; */
+}
+
+h1 a {
+  text-decoration: none;
+}
+
+/* 가독하기 쉬운 기본 값 : 자간<어간<행간 */
+p {
+  font-size: 14px;
+  letter-spacing: -0.024em;
+  word-spacing: 0.02em;
+  text-indent: -0.2em;
+  /* padding-left: 1em; */
+}
+
+.white-space-ex {
+  white-space: pre-line;
+  /* white-space: pre;
+  white-space: nowrap; */
+}
+
+.word-break-ex {
+  /*
+    단어의 분리를 어떻게 할 것인지 결정
+
+    (공백/띄어쓰기) 수고했어 오늘도
+    (음절)          수 고 했 어 오 늘 도
+  */
+  /* word-break: break-all; */
+  /*
+    박스의 가로 영역을 넘친 단어 내에서
+    임의의 분리 여부를 결정하여 줄바꿈에 관여
+  */
+  word-wrap: break-word;
+}
