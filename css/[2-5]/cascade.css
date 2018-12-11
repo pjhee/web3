@@ -65,3 +65,21 @@
   참고: https://goo.gl/BAhjiN
 
 */
+
+/* 0011 */
+li:nth-child(2) {
+  outline: 4px solid #ff0;
+}
+
+/* 0012 */
+ul li:nth-child(2) {
+  outline-width: 1px;
+  outline-color: #b11a25;
+}
+
+/* 0022 */
+ul.cascading-rules li:nth-child(2) {
+  outline-width: 10px;
+  outline-color: #eec129;
+  outline-style: double;
+}
